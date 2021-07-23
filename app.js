@@ -43,22 +43,21 @@ const Player = (props) => {
 }
 
 class Counter extends React.Component {
-  constructor() {
-  super();
-  this.state = { score: 0 };
-  this.incrementScore = this.incrementScore.bind(this);
-  this.decrementScore = this.decrementScore.bind(this);
-  }
+  state = { score: 0 };
 
-  incrementScore() {
-    this.setState({
-      score: this.state.score + 1
+  incrementScore = () => {
+    this.setState( prevState => {
+      return {
+        score: prevState.score + 1
+      };
     });
   }
 
-  decrementScore() {
-    this.setState({
-      score: this.state.score - 1
+  decrementScore = () => {
+    this.setState( prevState => {
+      return {
+        score: prevState.score - 1
+      };
     });
   }
 
