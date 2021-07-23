@@ -46,19 +46,15 @@ class Counter extends React.Component {
   state = { score: 0 };
 
   incrementScore = () => {
-    this.setState( prevState => {
-      return {
+    this.setState( prevState => ({
         score: prevState.score + 1
-      };
-    });
+    }));
   }
 
   decrementScore = () => {
-    this.setState( prevState => {
-      return {
+    this.setState( prevState => ({
         score: prevState.score - 1
-      };
-    });
+    }));
   }
 
   render() {
